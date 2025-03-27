@@ -8,22 +8,27 @@ VIPER架构分为四个主要层次：
 
 ```mermaid
 flowchart TB
-subgraph TL[工具层 (Tools Layer)]
+subgraph TL[Tools Layer]
   D[RPA 多模态解析 数据处理 通用功能封装]
 end
-subgraph PL[协议层 (Protocol Layer)]
+subgraph PL[Protocol Layer]
   C[统一协议 鉴权与访问控制 跨系统适配]
 end
-subgraph CL[编排层 (Orchestration Layer)]
+subgraph CL[Orchestration Layer]
   B[多智能体 工作流编排 监控与容错 动态调度]
 end
-subgraph VL[可视化层 (Visualization Layer)]
+subgraph VL[Visualization Layer]
   A[可视化界面 监控与统计 用户交互]
 end
 
 D --> C
 C --> B
 B --> A
+
+style TL fill:#fcfce8,stroke:#ecc94b,stroke-width:2px,color:#92400e
+style PL fill:#ebf8ff,stroke:#4299e1,stroke-width:2px,color:#2c5282
+style CL fill:#f0fff4,stroke:#48bb78,stroke-width:2px,color:#22543d
+style VL fill:#ffeefc,stroke:#be185d,stroke-width:2px,color:#831843
 ```
 
 ### 各层说明
